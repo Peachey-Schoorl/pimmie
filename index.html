@@ -6,6 +6,9 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Bitter&family=Open+Sans&display=swap" rel="stylesheet">
 
+<script src="https://cdn.simplyedit.io/1/1.26/simply-edit.js" data-simply-storage="none"></script>
+<script src="https://unpkg.com/simplyview@2.0.0/dist/simply.everything.js"></script>
+
 <h1>
   <title>Pimmie Peachey-Schoorl</title>
   <svg viewBox="0 0 200 20">
@@ -38,21 +41,21 @@
   </p>
 </section>
 
-<ul>
-  <li><a href="https://www.pinterest.com/pimmie/">
-    <svg viewBox="0 0 256 256">
+<ul class="socials">
+  <li class="social"><a class="social_link" href="https://www.pinterest.com/pimmie/">
+    <svg class="social_icon" viewBox="0 0 256 256">
       <path fill="#CB1F27"
             d="M0 128.002c0 52.414 31.518 97.442 76.619 117.239-.36-8.938-.064-19.668 2.228-29.393 2.461-10.391 16.47-69.748 16.47-69.748s-4.089-8.173-4.089-20.252c0-18.969 10.994-33.136 24.686-33.136 11.643 0 17.268 8.745 17.268 19.217 0 11.704-7.465 29.211-11.304 45.426-3.207 13.578 6.808 24.653 20.203 24.653 24.252 0 40.586-31.149 40.586-68.055 0-28.054-18.895-49.052-53.262-49.052-38.828 0-63.017 28.956-63.017 61.3 0 11.152 3.288 19.016 8.438 25.106 2.368 2.797 2.697 3.922 1.84 7.134-.614 2.355-2.024 8.025-2.608 10.272-.852 3.242-3.479 4.401-6.409 3.204-17.884-7.301-26.213-26.886-26.213-48.902 0-36.361 30.666-79.961 91.482-79.961 48.87 0 81.035 35.364 81.035 73.325 0 50.213-27.916 87.726-69.066 87.726-13.819 0-26.818-7.47-31.271-15.955 0 0-7.431 29.492-9.005 35.187-2.714 9.869-8.026 19.733-12.883 27.421a127.897 127.897 0 0036.277 5.249c70.684 0 127.996-57.309 127.996-128.005C256.001 57.309 198.689 0 128.005 0 57.314 0 0 57.309 0 128.002z"/>
     </svg>
   </a></li>
-  <li><a href="https://www.youtube.com/playlist?list=PLOqEcQp38j6rGgvIFdQh20V-jLjSLfe0g">
-    <svg viewBox="5.368 13.434 53.9 37.855">
+  <li class="social"><a class="social_link" href="https://www.youtube.com/playlist?list=PLOqEcQp38j6rGgvIFdQh20V-jLjSLfe0g">
+    <svg class="social_icon" viewBox="5.368 13.434 53.9 37.855">
       <path fill="#CD201F"
             d="M27.691 51.242c-10.265-.189-13.771-.359-15.926-.803-1.458-.295-2.725-.95-3.654-1.9-.718-.719-1.289-1.816-1.732-3.338-.38-1.268-.528-2.323-.739-4.9-.323-5.816-.4-10.571 0-15.884.33-2.934.49-6.417 2.682-8.449 1.035-.951 2.239-1.563 3.591-1.816 2.112-.401 11.11-.718 20.425-.718 9.294 0 18.312.317 20.426.718 1.689.317 3.273 1.267 4.203 2.492 2 3.146 2.035 7.058 2.238 10.118.084 1.458.084 9.737 0 11.195-.316 4.836-.57 6.547-1.288 8.321-.444 1.12-.823 1.711-1.479 2.366a7.085 7.085 0 01-3.76 1.922c-8.883.668-16.426.813-24.987.676zM41.294 31.81c-4.942-2.641-9.674-5.09-14.511-7.625v15.166c5.09-2.767 10.456-5.302 14.532-7.562l-.021.021z"></path>
     </svg>
   </a></li>
-  <li><a href="https://www.instagram.com/hetwollenhuis/">
-    <svg viewBox="0 0 2500 2500">
+  <li class="social"><a class="social_link" href="https://www.instagram.com/hetwollenhuis/">
+    <svg class="social_icon" viewBox="0 0 2500 2500">
       <radialGradient id="a" cx="332.14" cy="2511.81" r="3263.54" gradientUnits="userSpaceOnUse">
         <stop offset=".09" stop-color="#fa8f21"/>
         <stop offset=".78" stop-color="#d82d7e"/>
@@ -147,6 +150,10 @@
         font-size: 1em;
     }
 
+    .header--non-svg {
+        font-size: 2em;
+    }
+
     section h2,
     section h3 {
         background: #eb374b;
@@ -193,8 +200,9 @@
     }
 
     svg {
-        width: 100%;
+        overflow: visible;
         margin: 1em;
+        width: 80%;
     }
 
     svg:nth-of-type(1) {
@@ -205,7 +213,8 @@
         max-width: 20em;
     }
 
-    ul {
+    /* ----- Socials -------------------------------------------------------- */
+    .socials {
         display: flex;
         justify-content: center;
         list-style: none;
@@ -213,20 +222,135 @@
         padding: 0;
     }
 
-    ul svg {
+    .social_icon {
         height: 2em;
         margin: 0 1em;
     }
 
-    ul a {
+    .social_link {
         display: inline-block;
         height: 2em;
         opacity: 0.5;
     }
 
-    ul a:hover {
+    .social_link:hover {
         opacity: 1;
     }
+
+    /* ----- Videos --------------------------------------------------------- */
+    .videos {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+    }
+
+    .video {
+        background: black;
+        border: 1px solid #000;
+        box-sizing: border-box;
+        flex: 1 1 20vw;
+        margin: 1em;
+        position: relative;
+        text-align: center;
+
+        box-shadow: 0 4px 0 rgba(94, 94, 94, 0.1);
+    }
+
+    .video_link {
+        color: white;
+    }
+
+    .video_thumbnail {
+        object-fit: cover;
+        opacity: 0.5;
+        width: 100%;
+    }
+
+    .video_title {
+        background: #eb374b;
+        display: block;
+        font-size: 1.5vw;
+        left: 0;
+        position: absolute;
+        text-align: center;
+        top: 0;
+        width: 100%;
+    }
+
+    .video_description {
+        background: #FFF9;
+        bottom: 0;
+        color: black;
+        left: 0;
+        opacity: 0;
+        padding: 1em;
+        position: absolute;
+        transition: opacity 1s ease-in-out;
+        width: calc( 100% - 2em );
+    }
+
+    .video:hover .video_description,
+    .video:hover .video_thumbnail {
+        opacity: 1;
+    }
+
 </style>
+
 <link href="https://fonts.googleapis.com/css2?family=Bitter&family=Open+Sans&display=swap" rel="stylesheet">
+
+<script>
+  const youtube = simply.api.proxy({
+    baseURL: 'https://youtube.googleapis.com/youtube/v3/',
+  });
+
+  const container = document.createElement('ul')
+  container.classList.add('videos')
+
+  youtube.playlistItems({
+    key: 'AIzaSyDNJm0gp83U_w9mUhIixjBMhyFZtJoRQ2c',
+    maxResults: 50,
+    part: 'snippet',
+    playlistId: 'PLOqEcQp38j6rGgvIFdQh20V-jLjSLfe0g',
+  }).then(response => {
+    document.body.insertAdjacentHTML('beforeend', `<h2 class="header--non-svg">Videos</h2>`)
+    document.body.insertAdjacentElement('beforeend', container)
+
+    // @TODO: If response.nextPageToken exists, there are more pages to be fetched
+    const items = response.items.map(item => {
+      const result = {
+        description: item.snippet.description,
+        url: `https://www.youtube.com/watch?v=${item.id}`,
+        title: item.snippet.title,
+      }
+
+      if (item.snippet.thumbnails.standard) {
+        result.thumbnail = item.snippet.thumbnails.standard
+      } else if (item.snippet.thumbnails.high) {
+        result.thumbnail = item.snippet.thumbnails.high
+      } else if (item.snippet.thumbnails.default) {
+        result.thumbnail = item.snippet.thumbnails.default
+      } else {
+        console.log('@FIXME: Add default thumbnail image!')
+      }
+
+      return result
+    })
+
+    items.forEach(item => {
+      container.insertAdjacentHTML('beforeend', `
+        <li class="video">
+          <a class="video_link" href="${item.url}">
+            <img
+                class="video_thumbnail" src="${item.thumbnail.url}" width="${item.thumbnail.width}"
+                height="${item.thumbnail.height}" alt="Thumbnail for ${item.title}"
+            />
+            <span class="video_title">${item.title}</span>
+            <span class="video_description">${item.description}</span>
+        </li>
+      `)
+    })
+
+  })
+</script>
 </html>
