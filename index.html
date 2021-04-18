@@ -259,9 +259,13 @@
 
     .video_link {
         color: white;
+        font-size: 1em;
     }
 
     .video_thumbnail {
+        height: auto;
+        min-height: 10em;
+        min-width: 5em;
         object-fit: cover;
         opacity: 0.5;
         width: 100%;
@@ -270,7 +274,6 @@
     .video_title {
         background: #eb374b;
         display: block;
-        font-size: 1.5vw;
         left: 0;
         position: absolute;
         text-align: center;
@@ -282,6 +285,7 @@
         background: #FFF9;
         bottom: 0;
         color: black;
+        font-size: 1em;
         left: 0;
         opacity: 0;
         padding: 1em;
@@ -320,7 +324,7 @@
     const items = response.items.map(item => {
       const result = {
         description: item.snippet.description,
-        url: `https://www.youtube.com/watch?v=${item.id}`,
+        url: `https://www.youtube.com/watch?v=${item.snippet.resourceId.videoId}`,
         title: item.snippet.title,
       }
 
